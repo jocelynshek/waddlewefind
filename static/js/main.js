@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function startGameOnEnter(event) {
         if (event.key === "Enter") {
             // Redirect to letter html starting game
-            //window.location.href = "letter.html";
-            window.location.href = "search.html";
+            window.location.href = "letter.html";
         }
 
     }
