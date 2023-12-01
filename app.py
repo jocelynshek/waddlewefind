@@ -16,6 +16,11 @@ def start():
     # Renders the index.html template
     return render_template('start.html')
 
+@app.route('/letter.html')
+def letter():
+    # Renders letter.html page
+    return render_template('letter.html')
+
 #@app.route('/letter')
 #def letter():
 
