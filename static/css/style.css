@@ -1,3 +1,9 @@
+/* Import Font Files */
+@font-face {
+    font-family: 'Pixel Cowboy';
+    src: url(resources/PixelCowboy.otf) format('opentype');
+}
+
 /* Resetting default margin and padding for all elements */
 * {
     margin: 0;
@@ -57,4 +63,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px;
+}
+
+.title-screen {
+    font-family: 'PixelCowboy', sans-serif;
+    font-size: 5rem;
+    text-align: center;
 }
