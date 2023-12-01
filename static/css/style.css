@@ -1,7 +1,7 @@
 /* Import Font Files */
 @font-face {
     font-family: 'PixelCowboy';
-    src: url('fonts/PixelCowboy.otf') format('opentype'); 
+    src: url('../../resources/fonts/PixelCowboy.otf') format('opentype'),
 
 }
 
