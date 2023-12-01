@@ -1,7 +1,10 @@
 /* Import Font Files */
 @font-face {
     font-family: 'PixelCowboy';
-    src: url('../resources/PixelCowboy.otf') format('opentype');
+    src: url('../resources/PixelCowboy.otf') format('opentype'),
+         url('../resources/PixelCowboy.woff') format('woff'),
+         url('../resources/PixelCowboy.woff2') format('woff2'); 
+
 }
 
 /* Resetting default margin and padding for all elements */
