@@ -76,6 +76,7 @@ footer {
 
 .start-title {
     font-family: 'PixelCowboy', sans-serif;
+    background-image: url('../../resources/Pbackground.jpg');
     font-size: 5rem;
     text-align: center;
 }
@@ -83,12 +84,4 @@ footer {
 button {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2rem;
-}
-
-.title-screen {
-    background-image: url('../../resources/Pbackground.jpg');
-    /* Replace 'path_to_your_image' with the path to your image */
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Additional styles for positioning, size, etc. */
 }
