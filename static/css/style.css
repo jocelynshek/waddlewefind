@@ -86,7 +86,7 @@ button {
 }
 
 .title-screen {
-    background-image: url('../../resources/Pbackground.jpg')
+    background-image: url('../../resources/Pbackground.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
