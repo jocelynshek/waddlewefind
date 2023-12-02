@@ -26,8 +26,23 @@ document.addEventListener('DOMContentLoaded', function() {
     computerButton.addEventListener('click', redirectToComputer);
 });
 
+document.getElementById('category-select').addEventListener('change', function() {
+    var selectedCategory = this.value;
+    fetch(`/get_options?category=${encodeURIComponent(selectedCategory)}`)
+        .then(response => response.json())
+        .then(data => {
+            var optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = ''; // Clear previous options
+            data.options.forEach(option => {
+                // Assuming you want to display options as a list
+                optionsContainer.innerHTML += `<li>${option}</li>`;
+            });
+        })
+        .catch(error => console.error('Error:', error));
+});
 
-function updateOptions() {
+
+/*function updateOptions() {
     var category = document.getElementById('category-select').value;
     fetch('/get_options?category=' + category)
         .then(response => response.json())
@@ -38,7 +53,7 @@ function updateOptions() {
                 select.innerHTML += `<option value="${option}">${option}</option>`;
             });
         });
-}
+}*/
 
 function getPenguins() {
     var category = document.getElementById('category-select').value;

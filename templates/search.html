@@ -7,13 +7,13 @@
 <body>
     <h2>Penguin Information Query</h2>
     <label for="category-select">Choose a category:</label>
-    <select id="category-select" onchange="updateOptions()">
-        <option value="">--Please choose an option--</option>
-        <option value="species">Species</option>
-        <option value="origin">Origin</option>
-        <option value="location">Location</option>
-        <option value="sex">Sex</option>
-        <option value="age">Age</option>
+    <select id="category-select" onchange="getOptions()">
+        <option disabled selected>Symbol</option>
+        <option value="Species">Species</option>
+        <option value="Origin">Origin</option>
+        <option value="Location">Location</option>
+        <option value="Sex">Sex</option>
+        <option value="Age">Age</option>
     </select>
 
     <label for="option-select">Choose an option:</label>

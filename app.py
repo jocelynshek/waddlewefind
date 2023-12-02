@@ -26,16 +26,23 @@ def computer():
     # Render computer.html page
     return render_template('computer.html')
 
-@app.route('/search')
-def index():
+@app.route('/search.html')
+def search():
     """Route to serve the search page."""
     return render_template('search.html')
 
 @app.route('/get_options')
-def get_options():
+def getOptions():
     """Route to get options based on the selected category."""
     category = request.args.get('category')
+
+    valid_categories = ['Species', 'Origin', 'Location', 'Sex', 'Age']  # Update with your actual column names
+    if category not in valid_categories:
+        return jsonify({"error": "Invalid category"}), 400
+
     query = f"SELECT DISTINCT {category} FROM penguins"
+
+
     options = query_db(query)
     return jsonify(options=[o[0] for o in options])
 
