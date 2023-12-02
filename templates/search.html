@@ -6,7 +6,7 @@
 </head>
 <body>
     <h2>Penguin Information Query</h2>
-    <label for="category-select">Choose a category:</label>
+    <!-- <label for="category-select">Choose a category:</label>
     <select id="category-select" onchange="getOptions()">
         <option disabled selected>Symbol</option>
         <option value="Species">Species</option>
@@ -16,15 +16,31 @@
         <option value="Age">Age</option>
     </select>
 
-    <label for="option-select">Choose an option:</label>
-    <select id="option-select" onchange="getPenguins()">
-        <!-- Options will be populated based on category selection -->
+    <label for="option-select">Choose an option:</label>-->
+
+    <select name="category" id="category-dropdown">
+        <option value="">Select a Category</option>
+        {% for category in categories %}
+            <option value="{{ category }}">{{ category }}</option>
+        {% endfor %}
     </select>
 
-    <div id="results">
-        <!-- Results will be displayed here -->
-    </div>
+    <select id="options-dropdown" disabled>
+        <option value="">Select an Option</option>
+    </select>
 
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+    <!-- <form name="form1" id="form1" action="/action_page.php">
+        Category: <select name="category" id="category">
+          <option value="" selected="selected">Select category</option>
+        </select>
+        <br><br>
+        Option: <select name="option" id="option">
+          <option value="" selected="selected">Please select category first</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <script src="main.js"></script>
 </body>
 </html>

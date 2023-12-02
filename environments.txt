@@ -1,0 +1,4 @@
+Flask
+CS50
+pandas
+sqlite3
