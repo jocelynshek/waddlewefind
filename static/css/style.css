@@ -84,3 +84,9 @@ button {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2rem;
 }
+
+.title-screen {
+    background-image: url('../../resources/Pbackground.jpg')
+    background-repeat: no-repeat;
+    background-size: cover;
+}
