@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Function starting game when Enter key pressed
-    function startGameOnEnter(event) {
-        if (event.key === "Enter") {
-            // Redirect to letter html starting game
-            window.location.href = "letter.html";
-        }
-
+    //When button pressed, start game
+    function StartGame() {
+        // Redirect to letter.html when the button pressed
+        window.location.href = "letter.html";
     }
 
-    // Event listener for the Start button click
-    document.addEventListener('keydown', startGameOnEnter);
+    // Get the button element by its ID
+    var startButton = document.getElementById('startButton');
+
+    // Add a click event listener to the button
+    startButton.addEventListener('click', StartGame);
 });
 
 
