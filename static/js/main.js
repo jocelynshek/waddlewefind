@@ -12,6 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
     startButton.addEventListener('click', StartGame);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to redirect to computer.html when the button is clicked
+    function redirectToComputer() {
+        // Redirect to computer.html when the button is clicked
+        window.location.href = "computer.html";
+    }
+
+    // Get the button element by its ID
+    var computerButton = document.getElementById('Computer');
+
+    // Add a click event listener to the button
+    computerButton.addEventListener('click', redirectToComputer);
+});
+
 
 function updateOptions() {
     var category = document.getElementById('category-select').value;
