@@ -21,8 +21,10 @@ def letter():
     # Renders letter.html page
     return render_template('letter.html')
 
-#@app.route('/letter')
-#def letter():
+@app.route('/computer.html')
+def computer():
+    # Render computer.html page
+    return render_template('computer.html')
 
 @app.route('/search')
 def index():
