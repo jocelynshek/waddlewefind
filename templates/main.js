@@ -15,8 +15,9 @@ document.getElementById('category-dropdown').addEventListener('change', function
 
         data.forEach(option => {
             var newOption = document.createElement('option');
-            newOption.value = option;
-            newOption.textContent = option;
+            var optionValue = item[selectedCategory]; // Get the value using selectedCategory as key
+            newOption.value = optionValue;
+            newOption.textContent = optionValue;
             dropdown.appendChild(newOption);
         });
 
