@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from cs50 import SQL
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__)
 
 db = SQL("sqlite:///penguins.db")
 
