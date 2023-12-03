@@ -74,12 +74,13 @@ footer {
     padding: 20px;
 }
 
-.start-title {
-    font-family: 'PixelCowboy', sans-serif;
-    font-size: 5rem;
-    text-align: center;
+.title-screen {
+    /* Other styles */
+    background-image: url("../resources/Pbackground.jpg");
+    /* Adjust background properties as needed */
+    background-size: cover;
+    background-position: center;
 }
-
 button {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2rem;
