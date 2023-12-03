@@ -1,7 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+//document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('category-dropdown').addEventListener('change', function() {
     // This code will run whenever the selected option in the dropdown menu changes
+    console.log("hi")
     var selectedCategory = this.value; // Get the value of the selected option
     // You can now use selectedCategory to do something, like making a request to your server
     fetch('/get-options?category=' + selectedCategory)
@@ -118,4 +119,4 @@ function getPenguins() {
             });
         });
 }
-});
+//});
