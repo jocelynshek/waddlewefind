@@ -78,26 +78,35 @@ footer {
     font-family: 'PixelCowboy', sans-serif;
     font-size: 5rem;
     text-align: center;
-    color: #FFFAFF;
+    color: #FDC601;
     margin-bottom: 20px;
     text-shadow: 
-    -3px -3px 0 #0A2463, /* Top-left border */
-    3px -3px 0 #0A2463, /* Top-right border */
-    -3px 3px 0 #0A2463, /* Bottom-left border */
-    3px 1px 0 #0A2463; /* Bottom-right border */
+    -3px -3px 0 #FFFAFF, /* Top-left border */
+    3px -3px 0 #21242E, /* Top-right border */
+    -3px 3px 0 #21242E, /* Bottom-left border */
+    3px 3px 0 #21242E; /* Bottom-right border */
 }
 
 button {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 1.5rem;
-    background-color: #FDC601;
-    border: 3px solid #1E1B18;
-    border-radius: 0.5rem;
+    background-color: #21242E;
+    border: 3px solid #FDC601;
+    color:#FDC601;
     line-height: 1.5;
     padding: 0.375rem 0.75rem;
     text-align: center;
     vertical-align: middle;
     margin: 10px
+    -webkit-box-shadow: -3px -3px 1px #FFFAFF:
+    -moz-box-shadow: -3px -3px 1px #FFFAFF;
+    box-shadow: -3px -3px 1px #FFFAFF;
+}
+
+button:hover {
+    -webkit-box-shadow: 3px 3px 0px #21242E; /* For WebKit browsers */
+    -moz-box-shadow: 3px 3px 0px #21242E; /* For Mozilla browsers */
+    box-shadow: 3px 3px 0px #21242E; /* Standard */
 }
 
 .title-screen {

@@ -1,0 +1,46 @@
+/* CSS for animating moving penguin images in start page*/
+
+.bouncing-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Change penguin size and position */
+.bouncing-images img {
+    position: absolute;
+    width: 150px; 
+    height: auto; 
+}
+
+/* Animation for King penguin */
+@keyframes bounceKing {
+    0% {
+        transform: translate(-100vw, 70vh);
+    }
+    100% {
+        transform: translate(100vw, 70vh);
+    }
+}
+
+/* Animation for Gentoo penguin */
+@keyframes bounceGentoo {
+    0% {
+        transform: translate(0vw, 70vh);
+    }
+    100% {
+        transform: translate(200vw, 70vh);
+    }
+}
+
+/* Apply animations to each image */
+.King {
+    animation: bounceKing 10s linear infinite;
+}
+
+.Gentoo {
+    animation: bounceGentoo 10s linear infinite;
+}
