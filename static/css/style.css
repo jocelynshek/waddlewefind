@@ -97,8 +97,8 @@ button {
     padding: 0.375rem 0.75rem;
     text-align: center;
     vertical-align: middle;
-    margin: 10px
-    -webkit-box-shadow: -3px -3px 1px #FFFAFF:
+    margin: 10px;
+    -webkit-box-shadow: -3px -3px 1px #FFFAFF;
     -moz-box-shadow: -3px -3px 1px #FFFAFF;
     box-shadow: -3px -3px 1px #FFFAFF;
 }
