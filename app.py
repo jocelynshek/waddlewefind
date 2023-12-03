@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 from cs50 import SQL
 
 app = Flask(__name__)
@@ -39,6 +39,7 @@ def get_options():
     category = request.args.get('category')
     print("SELECT DISTINCT " + category + " FROM penguins")
     options = db.execute("SELECT DISTINCT " + category + " FROM penguins")
+    print(options)
     return jsonify(options) 
 
 

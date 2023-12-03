@@ -3,9 +3,42 @@
 <head>
     <title>Penguin Database Query</title>
     <!-- Add additional head elements here -->
+    <script>
+
+    function hello() {
+                alert("Hello, there!");
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('category-dropdown').addEventListener('change', function() {
+    // This code will run whenever the selected option in the dropdown menu changes
+    console.log("hi")
+    var selectedCategory = this.value; // Get the value of the selected option
+    // You can now use selectedCategory to do something, like making a request to your server
+    fetch('/get-options?category=' + selectedCategory)
+    .then(response => response.json())
+    .then(data => {
+
+        var dropdown = document.getElementById('options-dropdown'); // Replace with your dropdown's id
+        dropdown.innerHTML = ''; // Clear any existing options
+        dropdown.disabled = false; // Enable the dropdown
+
+        data.forEach(option => {
+            var newOption = document.createElement('option');
+            newOption.value = option;
+            newOption.textContent = option;
+            dropdown.appendChild(newOption);
+        });
+
+    });
+});
+            });
+    </script>
 </head>
 <body>
     <h2>Penguin Information Query</h2>
+    <button onclick="hello()">
+        click here
+    </button>
     <!-- <label for="category-select">Choose a category:</label>
     <select id="category-select" onchange="getOptions()">
         <option disabled selected>Symbol</option>
@@ -41,6 +74,6 @@
         <input type="submit" value="Submit">
     </form> -->
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>
