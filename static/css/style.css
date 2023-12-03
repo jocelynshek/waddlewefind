@@ -77,22 +77,35 @@ footer {
 .start-title {
     font-family: 'PixelCowboy', sans-serif;
     font-size: 5rem;
-    text-align: center;    
-    color: #feffff;
-    -webkit-text-stroke: 3px #020101;
-    display: flex; center;
+    text-align: center;
+    color: #FFFAFF;
+    margin-bottom: 20px;
+    text-shadow: 
+    -3px -3px 0 #0A2463, /* Top-left border */
+    3px -3px 0 #0A2463, /* Top-right border */
+    -3px 3px 0 #0A2463, /* Bottom-left border */
+    3px 1px 0 #0A2463; /* Bottom-right border */
 }
 
 button {
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 2rem;
-
+    font-size: 1.5rem;
+    background-color: #FDC601;
+    border: 3px solid #1E1B18;
+    border-radius: 0.5rem;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px
 }
 
 .title-screen {
-    /* Other styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url("../resources/Pbackground.jpg");
-    /* Adjust background properties as needed */
     background-size: cover;
     background-position: center;
     height: 100vh;
