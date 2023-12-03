@@ -77,12 +77,16 @@ footer {
 .start-title {
     font-family: 'PixelCowboy', sans-serif;
     font-size: 5rem;
-    text-align: center;
+    text-align: center;    
+    color: #feffff;
+    -webkit-text-stroke: 3px #020101;
+    display: flex; center;
 }
 
 button {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 2rem;
+
 }
 
 .title-screen {
