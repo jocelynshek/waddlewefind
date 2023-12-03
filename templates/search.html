@@ -2,68 +2,47 @@
 <html>
 <head>
     <title>Penguin Database Query</title>
-    <!-- Add additional head elements here -->
     <script>
-
-    function hello() {
-                alert("Hello, there!");
-            }
-            document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
+            // This code will run whenever the selected option in the dropdown menu changes
         document.getElementById('category-dropdown').addEventListener('change', function() {
             this.options[0].disabled = true;
-    // This code will run whenever the selected option in the dropdown menu changes
-    console.log("hi")
-    var selectedCategory = this.value; // Get the value of the selected option
-    // You can now use selectedCategory to do something, like making a request to your server
-    fetch('/get-options?category=' + selectedCategory)
-    .then(response => response.json())
-    .then(data => {
+            var selectedCategory = this.value; // Get the value of the selected option
+            // You can now use selectedCategory to do something, like making a request to your server
+            fetch('/get-options?category=' + selectedCategory)
+            .then(response => response.json())
+            .then(data => {
 
-        var dropdown = document.getElementById('options-dropdown'); // Replace with your dropdown's id
-        dropdown.innerHTML = ''; // Clear any existing options
-        dropdown.disabled = false; // Enable the dropdown
+            var dropdown = document.getElementById('options-dropdown'); // Replace with your dropdown's id
+            dropdown.innerHTML = ''; // Clear any existing options
+            dropdown.disabled = false; // Enable the dropdown
 
-        // Sort the data if the category is 'age'
-        if (selectedCategory === 'Age') {
-            data.sort((a, b) => parseInt(a[selectedCategory]) - parseInt(b[selectedCategory]));
-        }
+            // Sort the data if the category is 'age'
+            if (selectedCategory === 'Age') {
+                data.sort((a, b) => parseInt(a[selectedCategory]) - parseInt(b[selectedCategory]));
+            }
 
-        else {
-            // Alphabetical sorting for other categories
-            data.sort((a, b) => a[selectedCategory].localeCompare(b[selectedCategory]));
-        }
+            else {
+                // Alphabetical sorting for other categories
+                data.sort((a, b) => a[selectedCategory].localeCompare(b[selectedCategory]));
+            }
 
-        data.forEach(option => {
+            data.forEach(option => {
 
-            var newOption = document.createElement('option');
-            // Assuming each option is a dictionary with a single key-value pair
-            var optionValue = option[selectedCategory];
-            newOption.value = optionValue;
-            newOption.textContent = optionValue;
-            dropdown.appendChild(newOption);
-        });
-
-    });
-});
+                var newOption = document.createElement('option');
+                // Assuming each option is a dictionary with a single key-value pair
+                var optionValue = option[selectedCategory];
+                newOption.value = optionValue;
+                newOption.textContent = optionValue;
+                dropdown.appendChild(newOption);
             });
+        });
+    });
+    });
     </script>
 </head>
 <body>
     <h2>Penguin Information Query</h2>
-    <button onclick="hello()">
-        click here
-    </button>
-    <!-- <label for="category-select">Choose a category:</label>
-    <select id="category-select" onchange="getOptions()">
-        <option disabled selected>Symbol</option>
-        <option value="Species">Species</option>
-        <option value="Origin">Origin</option>
-        <option value="Location">Location</option>
-        <option value="Sex">Sex</option>
-        <option value="Age">Age</option>
-    </select>
-
-    <label for="option-select">Choose an option:</label>-->
 
     <select name="category" id="category-dropdown">
         <option value="">Select a Category</option>
@@ -75,18 +54,6 @@
     <select id="options-dropdown" disabled>
         <option value="">Select an Option</option>
     </select>
-
-    <!-- <form name="form1" id="form1" action="/action_page.php">
-        Category: <select name="category" id="category">
-          <option value="" selected="selected">Select category</option>
-        </select>
-        <br><br>
-        Option: <select name="option" id="option">
-          <option value="" selected="selected">Please select category first</option>
-        </select>
-        <br><br>
-        <input type="submit" value="Submit">
-    </form> -->
 
     <!-- <script src="main.js"></script> -->
 </body>
