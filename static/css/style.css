@@ -91,4 +91,6 @@ button {
     /* Adjust background properties as needed */
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    overflow: hidden;
 }
