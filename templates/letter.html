@@ -7,23 +7,41 @@
         <link rel="stylesheet" href="/static/css/style.css">
         <script src="/static/js/main.js"></script>
     </head>
-    <body>
+    <letter>
         <div id="Letter">
             <h2>Welcome to the Waddle Inn!</h2>
             <div>
                 <p>Congrats on your first day working as an intern for the first and famous penguin hotel! Your first job will be to go into our company computer and perform check-in for the following guest. The guest profile (including a picture just in case they are waiting at the lobby) is shown below:</p>
             </div>
-            <div>
-                <!-- Placeholder for nonsense -->
-                <p>(Nonsense content here)</p>
-                <!-- Placeholder for image -->
-                <img src="image-url.jpg" alt="Guest Image">
+            <!--<div>
+                # Placeholder for nonsense
+                <p>Name: ???</p>
+                <p>Species: {{species}}<p>
+                <p>Origin: {{origin}}</p>
+                <p>Location: {{location}}</p>
+                <p>Sex: {{sex}}</p>
+                <p>Age: {{age}}</p>
+                <img src="{{ image }}" alt="Guest Image">
+            </div>-->
+
+            <div class="content-container">
+                <div class="text-content">
+                    <p>Name: ???</p>
+                    <p>Species: {{species}}<p>
+                    <p>Origin: {{origin}}</p>
+                    <p>Location: {{location}}</p>
+                    <p>Sex: {{sex}}</p>
+                    <p>Age: {{age}}</p>
+                </div>
+                <img src="{{ image }}" alt="Guest Image" class="side-image">
             </div>
+
+
             <div>
                 <p>Best of lucks and if you have any questions check (clues for searching)</p>
             </div>
             <a href="/computer.html"><button>Go to Computer</button></a>
                      
         </div>
-    </body>
+    </letter>
     </html>
