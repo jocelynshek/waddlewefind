@@ -13,9 +13,35 @@
         {% endfor %}
     </select>
 
-    <select id="options-dropdown" disabled>
+    <select name="option" id="options-dropdown" disabled>
         <option value="">Select an Option</option>
     </select>
+
+    <table class="table tablestriped" id="penguins-table">
+        <thead>
+            <tr>
+                <th class="text-start">Name</th>
+                <th class="text-start">Species</th>
+                <th class="text-start">Origin</th>
+                <th class="text-start">Location</th>
+                <th class="text-start">Sex</th>
+                <th class="text-start">Age</th>
+            </tr>
+        </thead>
+       <tbody>
+            <!--{% for penguin in matchingpenguins %}
+                <tr>
+                    <th class="text-start">penguin.Name</th>
+                    <th class="text-start">penguin.Species</th>
+                    <th class="text-start">penguin.Origin</th>
+                    <th class="text-start">penguin.Location</th>
+                    <th class="text-start">penguin.Sex</th>
+                    <th class="text-start">penguin.Age</th>
+                </tr>
+            {% endfor %}-->
+        </tbody>
+    </table>
+
 
     <script src="../static/js/main.js"></script>
 </body>

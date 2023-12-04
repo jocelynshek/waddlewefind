@@ -43,17 +43,32 @@ def encyclopedia():
 @app.route('/search.html')
 def search():
     categories = ["Species", "Origin", "Location", "Sex", "Age"]
-    
+
     # Render the template with the categories data
     return render_template('search.html', categories=categories)
 
 @app.route('/get-options')
 def get_options():
     category = request.args.get('category')
-    print("SELECT DISTINCT " + category + " FROM penguins")
     options = db.execute("SELECT DISTINCT " + category + " FROM penguins")
     print(options)
     return jsonify(options)
+
+@app.route('/get-penguins')
+def get_penguins():
+    category = request.args.get('category')
+    option = request.args.get('option')
+
+    valid_categories = ['Species', 'Origin', 'Location', 'Sex', 'Age']  # Update with actual column names
+    # Validate the category
+    if category not in valid_categories:
+        return jsonify({'error': 'Invalid category'}), 400
+    
+    query = f"SELECT * FROM penguins WHERE {category} = ?"
+    matchingpenguins = db.execute(query, option)
+
+    print(matchingpenguins)
+    return jsonify(matchingpenguins)
 
 @app.route('/check.html')
 def check():
