@@ -19,20 +19,20 @@
 /* Animation for King penguin */
 @keyframes bounceKing {
     0% {
-        transform: translate(-100vw, 70vh);
+        transform: translate(-100vw, 78vh);
     }
     100% {
-        transform: translate(100vw, 70vh);
+        transform: translate(100vw, 78vh);
     }
 }
 
 /* Animation for Gentoo penguin */
 @keyframes bounceGentoo {
     0% {
-        transform: translate(0vw, 70vh);
+        transform: translate(0vw, 78vh);
     }
     100% {
-        transform: translate(200vw, 70vh);
+        transform: translate(200vw, 78vh);
     }
 }
 
