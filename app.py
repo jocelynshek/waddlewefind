@@ -20,6 +20,11 @@ def computer():
     # Render computer.html page
     return render_template('computer.html')
 
+@app.route('/encyclopedia')
+def encyclopedia():
+    #Render encyclopedia.html
+    return render_template('encyclopedia.html')
+
 @app.route('/search.html')
 def search():
     categories = ["Species", "Origin", "Location", "Sex", "Age"]
