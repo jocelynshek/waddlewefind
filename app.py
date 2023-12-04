@@ -22,10 +22,9 @@ gameoptions = [
 ]
 
 def get_random():
-    if 'placeholders' not in session:
-        session['placeholders'] = random.choice(gameoptions)
-    print("Selected option:", session['placeholders'])  # Debugging line
-    return session['placeholders']
+    if 'selected_penguin' not in session:
+        session['selected_penguin'] = random.choice(gameoptions)
+    return session['selected_penguin']
 
 @app.route('/letter.html')
 def letter():
@@ -56,9 +55,15 @@ def get_options():
     print(options)
     return jsonify(options)
 
-@app.route('/check')
+@app.route('/check.html')
 def check():
-    return render_template('check.html', **get_random())
+    return render_template('check.html')
+
+@app.route('/check_name', methods=['POST'])
+def check_name():
+    penguin_name = request.form.get('name')
+    correct_name = session.get('selected_penguin', {}).get('name', '')
+    return jsonify(correct=penguin_name.strip().lower() == correct_name.lower())
 
 if __name__ == '__main__':
     app.run(debug=True)
