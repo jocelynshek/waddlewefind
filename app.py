@@ -65,6 +65,15 @@ def get_penguins():
     print(matchingpenguins)
     return jsonify(matchingpenguins)
 
+@app.route('/toggle-star', methods=['POST'])
+def toggle_star():
+    penguin_id = request.form.get('penguinId')
+    is_starred = request.form.get('isStarred') == 'true'
+    
+    db.toggle_star(penguin_id, is_starred)  # Function to update the database
+
+    return {'status': 'success'}
+
 @app.route('/check.html')
 def check():
     return render_template('check.html')
