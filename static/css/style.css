@@ -231,3 +231,51 @@ button:hover {
     margin-bottom: 1rem;
     margin-left: 2rem;
 }
+
+/*Search.html Styling*/
+/* Custom CSS for dropdown buttons */
+select {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: .75rem;
+    color: #FFFAFF;
+    background-color: #21242E;
+    padding: 8px; /* Adjust the padding as needed */
+    margin: .75rem;
+    -webkit-box-shadow: -0.2rem -0.2rem 0rem #3E92CC;
+    -moz-box-shadow: -0.2rem -0.2rem 0rem #3E92CC;
+    box-shadow: -0.2rem -0.2rem 0rem #3E92CC;
+}
+
+/* Style for disabled dropdown */
+select[disabled] {
+    opacity: 0.5;
+}
+
+/* Custom CSS for table columns */
+.table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    width: calc(100% / 6); /* Divide equally for 6 columns (adjust based on your columns) */
+    text-align: left; /* Adjust alignment as needed */
+    padding: 8px; /* Adjust padding as needed */
+}
+
+/* CSS for alternating background color of table columns */
+tr:nth-child(even) {
+    background-color: #3E92CC; /* Change this to your desired color */
+}
+
+/* CSS to change the background color of the table legend/header */
+thead th {
+    background-color: #21242E; /* Change this to your preferred color */
+    color:#FFFAFF;
+}
+
+/* Enable word wrapping */
+td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

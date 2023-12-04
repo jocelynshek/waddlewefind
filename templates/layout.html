@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <title>Waddle We Find Start</title>
-        <link rel="stylesheet" href="/static/css/style.css">
-        <script src="/static/js/main.js"></script>
-    </head>
-    <body>
-        <header>
-            <h1>Your Website</h1>
-            <p>Welcome to your website!</p>
-          </header>
-        
-          <nav>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        
-          <main>
-            <section>
-              <h2>Main Content Section</h2>
-              <p>This is where your main content goes.</p>
-            </section>
-          </main>
-        
-          <footer>
-            <p>&copy; 2023 Your Website. All Rights Reserved.</p>
-          </footer>
-    </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+              <li><a href="letter.html"><img src="../static/resources/Letter.png"></a></li>
+              <li><a href="letter.html"><div>Scanned</div><div>Letter</div></a></li>
+              <li><a href="encyclopedia.html"><img src="../static/resources/Encyclopedia.png"></a></li>
+              <li><a href="encyclopedia.html"><div>Penguin</div><div>Species</div><div>Encyclopedia</div></a></li>
+              <li><a href="search.html"><img src="../static/resources/Search.png"></a></li>
+              <li><a href="search.html"><div>Guest</div><div>Database</div><div>Search</div></a></li>
+              <li><a href="check.html"><img src="../static/resources/Check.png"></a></li>
+              <li><a href="check.html"><div>Check</div><div>In</div></a>
+        </ul>
+    </nav>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    <footer>
+        <img id="bar" src="../static/resources/bar.png">
+        <a href="/letter.html"><img src="../static/resources/Letter.png"></a>
+        <a href="/encyclopedia.html"><img src="../static/resources/Encyclopedia.png">
+        <a href="/search.html"><img src="../static/resources/Search.png"></a>
+        <a href="/check.html"><img src="../static/resources/Check.png"></a>
+    </footer>
+</body>
 </html>
