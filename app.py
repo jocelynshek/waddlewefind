@@ -9,7 +9,6 @@ db = SQL("sqlite:///penguins.db")
 
 @app.route('/')
 def start():
-    # Renders the index.html template
     return render_template('start.html')
 
 # Predefined gameplay options
@@ -18,7 +17,6 @@ gameoptions = [
     {'name':'Barrel', 'species': '???', 'origin': 'Subantarctic islands', 'location': '???', 'sex': 'M', 'age': '2', 'image': 'resources/PGentoo.png'},
     {'name':'Egg', 'species': '???', 'origin': '???', 'location': 'SEA LIFE Melbourne', 'sex': 'F', 'age': '???', 'image': 'resources/PKing_.png'},
     {'name':'Cecilia', 'species': '???', 'origin': '???', 'location': '???', 'sex': 'F', 'age': '???', 'image': 'resources/PMagellanic.png'}
-    # ... other combinations
 ]
 
 def get_random():
@@ -32,19 +30,16 @@ def letter():
 
 @app.route('/computer.html')
 def computer():
-    # Render computer.html page
     return render_template('computer.html')
 
 @app.route('/encyclopedia.html')
 def encyclopedia():
-    # Render encyclopedia.html page
     return render_template('encyclopedia.html')
 
 @app.route('/search.html')
 def search():
     categories = ["Species", "Origin", "Location", "Sex", "Age"]
 
-    # Render the template with the categories data
     return render_template('search.html', categories=categories)
 
 @app.route('/get-options')
@@ -59,7 +54,7 @@ def get_penguins():
     category = request.args.get('category')
     option = request.args.get('option')
 
-    valid_categories = ['Species', 'Origin', 'Location', 'Sex', 'Age']  # Update with actual column names
+    valid_categories = ['Species', 'Origin', 'Location', 'Sex', 'Age'] 
     # Validate the category
     if category not in valid_categories:
         return jsonify({'error': 'Invalid category'}), 400
