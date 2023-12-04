@@ -76,13 +76,17 @@ letter {
 /* Header styles */
 header {
     background-color: #21242E;
-    padding: 1rem;
+    padding: 0.75rem;
     border-bottom: 0.15rem solid #58666F;
     color: #FFFAFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.75rem;
+}
+
+header div {
+    margin-left: 1rem;
 }
 
 /* Navigation styles */
@@ -189,8 +193,41 @@ button:hover {
     top: 20rem; /* Adjust the vertical position */
     right: 2rem; /* Adjust the horizontal position */
     transform: translateY(-17rem);
-    width: 60rem;
+    width: 65rem;
     height: 35rem;
+    border-radius: 0.5rem;
     background-color: #FFFAFF;
     overflow-y: auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.alt-content {
+    display: flex;
+    align-items: center;
+    background-color: #9baab3;
+}
+
+.content img,
+.alt-content img {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    width:30rem;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below inline elements */
+    margin-left: 1.5rem;
+}
+
+.text p {
+    flex: 1;
+    margin-bottom: 1rem; /* Adjust as needed for the desired space */
+    margin-left: 2rem;
+    font-size: 0.85rem;
+}
+
+.text h2 {
+    margin-bottom: 1rem;
+    margin-left: 2rem;
 }
