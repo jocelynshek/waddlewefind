@@ -192,4 +192,5 @@ button:hover {
     width: 60rem;
     height: 35rem;
     background-color: #FFFAFF;
+    overflow-y: auto;
 }
