@@ -1,1 +1,19 @@
-slay
+{% extends "computer.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block main %}
+    <!-- Add the content specific to encyclopedia -->
+    <div class="container">
+        <header>
+            <div class="left-side">
+                <h1>Encyclopedia</h1>
+            </div>
+            <div class="right-side">
+                <a href="/computer.html"><button class="exit">X</button></a>
+            </div>
+        </header>
+    </div>
+{% endblock %}

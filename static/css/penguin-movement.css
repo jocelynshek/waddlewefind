@@ -12,27 +12,27 @@
 /* Change penguin size and position */
 .bouncing-images img {
     position: absolute;
-    width: 150px; 
+    width: 13rem; 
     height: auto; 
 }
 
 /* Animation for King penguin */
 @keyframes bounceKing {
     0% {
-        transform: translate(-100vw, 78vh);
+        transform: translate(-100vw, 65vh);
     }
     100% {
-        transform: translate(100vw, 78vh);
+        transform: translate(100vw, 65vh);
     }
 }
 
 /* Animation for Gentoo penguin */
 @keyframes bounceGentoo {
     0% {
-        transform: translate(0vw, 78vh);
+        transform: translate(0vw, 65vh);
     }
     100% {
-        transform: translate(200vw, 78vh);
+        transform: translate(200vw, 65vh);
     }
 }
 
