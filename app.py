@@ -20,9 +20,9 @@ def computer():
     # Render computer.html page
     return render_template('computer.html')
 
-@app.route('/encyclopedia')
+@app.route('/encyclopedia.html')
 def encyclopedia():
-    #Render encyclopedia.html
+    # Render encyclopedia.html page
     return render_template('encyclopedia.html')
 
 @app.route('/search.html')
