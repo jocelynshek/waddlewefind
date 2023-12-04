@@ -33,7 +33,7 @@
                     <p>Sex: {{sex}}</p>
                     <p>Age: {{age}}</p>
                 </div>
-                <img src="{{ image }}" alt="Guest Image" class="side-image">
+                <img src="{{ url_for('static', filename=image) }}" alt="Guest Image" class="side-image">
             </div>
 
 

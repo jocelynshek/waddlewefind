@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Name</title>
+    <script>
+        function checkName() {
+            var name = document.getElementById('nameInput').value;
+            fetch('/check_name', {
+                method: 'POST',
+                body: new URLSearchParams('name=' + name)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.correct ? "Correct Name!" : "Wrong Name!");
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="nameInput" placeholder="Enter penguin name">
+    <button onclick="checkName()">Enter</button>
+</body>
+</html>
