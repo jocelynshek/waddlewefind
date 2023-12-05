@@ -279,3 +279,15 @@ td {
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+
+.star-button {
+    background-color: transparent;
+    border: none;
+    color: gold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.star-button:hover {
+    color: darkgoldenrod;
+}

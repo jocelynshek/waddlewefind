@@ -1,5 +1,33 @@
 let selectedCategory = null;
 
+// Function to toggle the star status
+function toggleStar(penguinId, isStarred) {
+    fetch('/toggle-star', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            penguinId: penguinId,
+            isStarred: isStarred
+        })
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Handle successful response
+            const starButton = document.querySelector(`[data-penguin-id="${penguinId}"]`);
+            starButton.innerHTML = isStarred ? '★' : '☆';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     resetTable();
     // This code will run whenever the selected option in the dropdown menu changes
@@ -78,6 +106,36 @@ document.getElementById('options-dropdown').addEventListener('change', function(
                 const ageCell = document.createElement('td');
                 ageCell.textContent = row.Age;
                 tr.appendChild(ageCell);
+
+                const starCell = document.createElement('td');
+                const starButton = document.createElement('button');
+                starButton.innerHTML = row.is_starred ? '★' : '☆'; // Filled star if is_starred is true, otherwise empty star
+                starButton.classList.add('star-button'); // Add class for styling
+                starButton.setAttribute('data-penguin-id', row.Name); // Store the penguin's ID
+            
+                // Event listener for the star button
+                starButton.addEventListener('click', function() {
+                    // Correctly get the penguin's ID from the star button
+                    const penguinId = this.getAttribute('data-penguin-id');
+                
+                    // Make sure penguinId is defined
+                    if (penguinId) {
+                        const isStarred = this.innerHTML === '★';
+                        toggleStar(penguinId, !isStarred)
+                            .then(() => {
+                                // Update the star only after the backend has responded successfully
+                                this.innerHTML = isStarred ? '☆' : '★';
+                            })
+                            .catch(error => {
+                                console.error('Error toggling star:', error);
+                            });
+                    } else {
+                        console.error('Penguin ID is undefined');
+                    }
+                });
+            
+                starCell.appendChild(starButton);
+                tr.appendChild(starCell);
 
                 tableBody.appendChild(tr);
             });

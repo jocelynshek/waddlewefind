@@ -1,10 +1,13 @@
 from flask import Flask, render_template, request, jsonify, session
 from cs50 import SQL
 import random
+import sqlite3
+import db as db_module
 
 app = Flask(__name__)
 app.secret_key = 'secret_key'
 
+db_module.initialize_database()
 db = SQL("sqlite:///penguins.db")
 
 @app.route('/')
@@ -67,12 +70,19 @@ def get_penguins():
 
 @app.route('/toggle-star', methods=['POST'])
 def toggle_star():
-    penguin_id = request.form.get('penguinId')
-    is_starred = request.form.get('isStarred') == 'true'
-    
-    db.toggle_star(penguin_id, is_starred)  # Function to update the database
+    data = request.get_json()
+    penguin_id = data.get('penguinId')
+    is_starred = data.get('isStarred')
 
-    return {'status': 'success'}
+    if penguin_id is not None:
+        is_starred = 1 if is_starred else 0
+
+        db_module.toggle_star(penguin_id, is_starred)
+
+        return jsonify({'status': 'success'})
+    else:
+        return jsonify({'error': 'Invalid penguin ID'}), 400
+
 
 @app.route('/check.html')
 def check():
