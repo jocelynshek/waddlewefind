@@ -12,6 +12,8 @@ db = SQL("sqlite:///penguins.db")
 
 @app.route('/')
 def start():
+    if 'selected_penguin' in session:
+        del session['selected_penguin']
     return render_template('start.html')
 
 # Predefined gameplay options

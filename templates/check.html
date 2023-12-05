@@ -4,17 +4,6 @@
     <meta charset="UTF-8">
     <title>Check Name</title>
     <script>
-        /*function checkName() {
-            var name = document.getElementById('nameInput').value;
-            fetch('/check_name', {
-                method: 'POST',
-                body: new URLSearchParams('name=' + name)
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert(data.correct ? "Correct Name!" : "Wrong Name!");
-            });
-        }*/
         function checkName() {
         var name = document.getElementById('nameInput').value;
         fetch('/check_name', {
