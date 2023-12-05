@@ -171,6 +171,11 @@ document.getElementById('options-dropdown').addEventListener('change', function(
     }
 });
 
+function resetTable() {
+    const tableBody = document.getElementById('penguins-table').querySelector('tbody');
+    tableBody.innerHTML = ''; // Clear the table
+}
+
 function determineCurrentPage() {
     // Get the current page's URL pathname
     const currentPagePath = window.location.pathname;
