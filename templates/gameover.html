@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Game Over!
+{% endblock %}
+    {% block main %}
+    <div class="container">
+        <header>
+            <div>
+                <h1>Game over!</h1>
+            </div>
+            <div>
+                <a href="/computer.html"><button class="exit">X</button></a>
+            </div>
+        </header>
+
+    <h1>
+        You successfully identified the guest! Great work!
+    </h1>
+
+    <button id="reset">Reset Game</button>
+
+    </div>
+    {% endblock %}
+<script src="../static/js/main.js"></script>
+</html>

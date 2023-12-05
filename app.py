@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, session
+from flask import Flask, render_template, request, jsonify, session, redirect
 from cs50 import SQL
 import random
 import sqlite3
@@ -96,6 +96,19 @@ def check_name():
     penguin_name = request.form.get('name')
     correct_name = session.get('selected_penguin', {}).get('name', '')
     return jsonify(correct=penguin_name.strip().lower() == correct_name.lower())
+
+@app.route('/gameover.html')
+def game_over():
+    return render_template('gameover.html')
+
+@app.route('/reset_game', methods=['POST'])
+def reset_game():
+    # Clear the selected_penguin from the session
+    if 'selected_penguin' in session:
+        del session['selected_penguin']
+    # Redirect to the start page
+    db_module.reset_starred()
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)

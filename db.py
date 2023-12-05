@@ -21,3 +21,10 @@ def toggle_star(penguin_id, is_starred):
     cur.execute('UPDATE penguins SET is_starred = ? WHERE Name = ?', (is_starred, penguin_id))
     conn.commit()
     conn.close()
+
+def reset_starred():
+    conn = sqlite3.connect('penguins.db')
+    cur = conn.cursor()
+    cur.execute('UPDATE penguins SET is_starred = FALSE')
+    conn.commit()
+    conn.close()

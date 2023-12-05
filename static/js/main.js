@@ -29,7 +29,8 @@ function toggleStar(penguinId, isStarred) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    resetTable();
+    const currentPage = determineCurrentPage();
+    if (currentPage === '/search.html'){
     // This code will run whenever the selected option in the dropdown menu changes
     document.getElementById('category-dropdown').addEventListener('change', function() {
         var optionsDropdown = document.getElementById('options-dropdown');
@@ -142,9 +143,38 @@ document.getElementById('options-dropdown').addEventListener('change', function(
         })
     .catch(error => console.error('Error:', error));        
 });
+    }
+
+    else {
+    // Add a click event listener to the "reset" button
+    document.getElementById("reset").addEventListener("click", function() {
+        console.log('Button was clicked!');
+        // Make an AJAX request to reset the game
+        fetch('/reset_game', {
+            method: 'POST', // Use GET if your route is defined as such
+        })
+        .then(response => {
+            // Handle the response as needed
+            if (response.ok) {
+                // Reset was successful, redirect to the start page
+                window.location.href = '/';
+            } else {
+                // Handle any error conditions if necessary
+                console.error('Reset failed.');
+            }
+        })
+        .catch(error => {
+            // Handle any network or other errors
+            console.error('Error:', error);
+        });
+    });
+    }
 });
 
-function resetTable() {
-    const tableBody = document.getElementById('penguins-table').querySelector('tbody');
-    tableBody.innerHTML = ''; // Clear the table
+function determineCurrentPage() {
+    // Get the current page's URL pathname
+    const currentPagePath = window.location.pathname;
+    
+    // Return the pathname to identify the current page
+    return currentPagePath;
 }
