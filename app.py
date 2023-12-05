@@ -65,7 +65,6 @@ def get_penguins():
     query = f"SELECT * FROM penguins WHERE {category} = ?"
     matchingpenguins = db.execute(query, option)
 
-    print(matchingpenguins)
     return jsonify(matchingpenguins)
 
 @app.route('/toggle-star', methods=['POST'])
@@ -83,6 +82,10 @@ def toggle_star():
     else:
         return jsonify({'error': 'Invalid penguin ID'}), 400
 
+@app.route('/starred.html')
+def starred():
+    starred_penguins = db.execute("SELECT * FROM penguins WHERE is_starred = TRUE")
+    return render_template('starred.html', starred_penguins=starred_penguins)
 
 @app.route('/check.html')
 def check():

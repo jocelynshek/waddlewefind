@@ -7,25 +7,12 @@
     <div class="container">
         <header>
             <div>
-                <h1>Guest Penguin Database Search</h1>
+                <h1>Starred Penguins</h1>
             </div>
             <div>
                 <a href="/computer.html"><button class="exit">X</button></a>
             </div>
         </header>
-
-    <select name="category" id="category-dropdown">
-        <option value="">Select a Category</option>
-        {% for category in categories %}
-            <option value="{{ category }}">{{ category }}</option>
-        {% endfor %}
-    </select>
-
-
-    <select name="option" id="options-dropdown" disabled>
-        <option value="">Select an Option</option>
-    </select>
-
 
     <table class="table tablestriped" id="penguins-table">
         <thead>
@@ -36,12 +23,18 @@
                 <th class="text-start">Location</th>
                 <th class="text-start">Sex</th>
                 <th class="text-start">Age</th>
-                <th class="text-end"></th>
             </tr>
+            {% for penguin in starred_penguins %}
+            <tr>
+                <td>{{ penguin.Name }}</td>
+                <td>{{ penguin.Species }}</td>
+                <td>{{ penguin.Origin }}</td>
+                <td>{{ penguin.Location }}</td>
+                <td>{{ penguin.Sex }}</td>
+                <td>{{ penguin.Age }}</td>
+            </tr>
+            {% endfor %}
         </thead>
-       <tbody>
-        
-        </tbody>
     </table>
     <script src="../static/js/main.js"></script>
     </div>
