@@ -15,6 +15,7 @@ function closePopup() {
     document.getElementById('letterPopup').style.display = 'none';
 }
 
+
 // Function to toggle the star status for a penguin
 function toggleStar(penguinId, isStarred) {
     // Sending a POST request to the server
