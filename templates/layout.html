@@ -32,18 +32,27 @@
 
 </head>
 <body>
-    <nav>
-        <ul>
-              <li><a href="letter.html"><img src="../static/resources/Letter.png"></a></li>
-              <li><a href="letter.html"><div>Scanned</div><div>Letter</div></a></li>
-              <li><a href="encyclopedia.html"><img src="../static/resources/Encyclopedia.png"></a></li>
-              <li><a href="encyclopedia.html"><div>Penguin</div><div>Species</div><div>Encyclopedia</div></a></li>
-              <li><a href="search.html"><img src="../static/resources/Search.png"></a></li>
-              <li><a href="search.html"><div>Guest</div><div>Database</div><div>Search</div></a></li>
-              <li><a href="check.html"><img src="../static/resources/Check.png"></a></li>
-              <li><a href="check.html"><div>Check</div><div>In</div></a>
-        </ul>
-    </nav>
+    <div class = "desktop">
+        <nav>
+            <ul>
+                <li><a href="letter.html"><img src="../static/resources/Letter.png"></a></li>
+                <li><a href="letter.html"><div>Scanned</div><div>Letter</div></a></li>
+                <li><a href="encyclopedia.html"><img src="../static/resources/Encyclopedia.png"></a></li>
+                <li><a href="encyclopedia.html"><div>Penguin</div><div>Species</div><div>Encyclopedia</div></a></li>
+                <li><a href="search.html"><img src="../static/resources/Search.png"></a></li>
+                <li><a href="search.html"><div>Guest</div><div>Database</div><div>Search</div></a></li>
+                <li><a href="check.html"><img src="../static/resources/Check.png"></a></li>
+                <li><a href="check.html"><div>Check</div><div>In</div></a>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="starred.html"><img src="../static/resources/star.png"></a></li>
+                <li><a href="starred.html"><div>Starred</div><div>Guests</div></a></li>
+            </ul>
+        </nav>
+    </div>
+
     {% if current_file != '/computer.html' %}
         <main>
             <div class="container">
@@ -66,6 +75,7 @@
         <a href="/encyclopedia.html"><img src="../static/resources/Encyclopedia.png">
         <a href="/search.html"><img src="../static/resources/Search.png"></a>
         <a href="/check.html"><img src="../static/resources/Check.png"></a>
+        <a href="/starred.html"><img src="../static/resources/star.png"></a>
     </footer>
 </body>
 </html>
