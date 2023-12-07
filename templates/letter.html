@@ -10,18 +10,10 @@
 
     {% block main %}
     <section class="letter">
-        <div id="letterPopup" class="popup">
-            <div class="popup-content">
-                <span class="close-button" onclick="closePopup()">&times;</span>
-                <p>Oh no! You have received a letter, but water splashed onto it and some info is missing!</p>
-            </div>
-        </div>        
-
-
         <div>
             <h2>Welcome to the Waddle Inn!</h2>
             <div>
-                <p>Congrats on your first day working as an intern for the first and most famous penguin hotel! Your job is to go on our company computer and check-in the following guest. The guest's informatino (including a picture just in case they are waiting at the lobby) is shown below:</p>
+                <p>Congrats on your first day working as an intern for the first and most famous penguin hotel! Your job is to go on our company computer and check-in the following guest. The guest's information (including a picture just in case they are waiting at the lobby) is shown below:</p>
             </div>
 
 
@@ -47,6 +39,16 @@
                      
         </div>
     </section>
+    {% endblock %}
+
+    {% block script %}
+    {{ super() }} {# Includes the scripts from the layout file #}
+
+    <script>
+        window.onload = function() {
+            alert("Welcome to the penguin hotel team! You have received a letter, but water splashed onto it and some info is missing!");
+        };
+    </script>
 
     {% endblock %}
 </html>
