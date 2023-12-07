@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-        <title>Letter</title>
-        <link rel="stylesheet" href="/static/css/style.css">
-        <script src="/static/js/main.js"></script>
-    </head>
-    <letter>
+{% extends "layout.html" %}
+
+{% block title %}
+    Penguin Database Query
+{% endblock %}
+
+{% block tab %}
+    Penguin Guest Database Search
+{% endblock %}
+
+    {% block main %}
+    <section class="letter">
         <div id="letterPopup" class="popup">
             <div class="popup-content">
                 <span class="close-button" onclick="closePopup()">&times;</span>
@@ -15,11 +17,13 @@
             </div>
         </div>        
 
-        <div id="Letter">
+
+        <div>
             <h2>Welcome to the Waddle Inn!</h2>
             <div>
                 <p>Congrats on your first day working as an intern for the first and most famous penguin hotel! Your job is to go on our company computer and check-in the following guest. The guest's informatino (including a picture just in case they are waiting at the lobby) is shown below:</p>
             </div>
+
 
             <div class="content-container">
                 <div class="text-content">
@@ -34,12 +38,15 @@
             </div>
 
 
+
+
             <div>
                 <p>Best of luck! If you have any questions, check the encyclopedia and database search!</p>
             </div>
             <a href="/computer.html"><button>Go to Computer</button></a>
                      
         </div>
-    </letter>
-    <script src="../static/js/main.js"></script>
-    </html>
+    </section>
+
+    {% endblock %}
+</html>
