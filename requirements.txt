@@ -1,5 +1,6 @@
 Flask
 CS50
+random
+db
 pandas
 sqlite3
-random
