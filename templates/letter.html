@@ -8,10 +8,17 @@
         <script src="/static/js/main.js"></script>
     </head>
     <letter>
+        <div id="letterPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-button" onclick="closePopup()">&times;</span>
+                <p>Oh no! You have received a letter, but water splashed onto it and some info is missing!</p>
+            </div>
+        </div>        
+
         <div id="Letter">
             <h2>Welcome to the Waddle Inn!</h2>
             <div>
-                <p>Congrats on your first day working as an intern for the first and famous penguin hotel! Your first job will be to go into our company computer and perform check-in for the following guest. The guest profile (including a picture just in case they are waiting at the lobby) is shown below:</p>
+                <p>Congrats on your first day working as an intern for the first and most famous penguin hotel! Your job is to go on our company computer and check-in the following guest. The guest's informatino (including a picture just in case they are waiting at the lobby) is shown below:</p>
             </div>
 
             <div class="content-container">
@@ -28,10 +35,11 @@
 
 
             <div>
-                <p>Best of lucks and if you have any questions check (clues for searching)</p>
+                <p>Best of luck! If you have any questions, check the encyclopedia and database search!</p>
             </div>
             <a href="/computer.html"><button>Go to Computer</button></a>
                      
         </div>
     </letter>
+    <script src="../static/js/main.js"></script>
     </html>
