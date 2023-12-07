@@ -11,11 +11,19 @@
     <body>
         <section class="title-screen">
             <div class="start-title">Waddle We Find?</div>
-            <a href = "letter.html"><button>Press to Start Game</button></a>
+            <a href = "letter.html" id="startGameButton"><button>Press to Start Game</button></a>
         </section>
         <div class="bouncing-images">
             <img class="King" src="../static/resources/NoBackKing.png" alt="Waddling King Penguin">
             <img class="Gentoo" src="../static/resources/NoBackGentoo.png" alt="Waddling Gentoo Penguin">
         </div>
     </body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById("startGameButton").addEventListener("click", function(event) {
+                alert("Welcome to the penguin hotel team! You have received a letter, but water splashed onto it and some info is missing!");
+            });
+        });
+    </script>
 </html>
