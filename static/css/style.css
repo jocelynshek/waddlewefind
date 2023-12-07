@@ -90,6 +90,12 @@ header div {
 }
 
 /* Navigation styles */
+
+.desktop {
+    display: flex;
+    justify-content: start;
+}
+
 nav {
     display: flex;
     justify-content: flex-start;
@@ -103,6 +109,7 @@ nav ul {
     flex-direction: column;
     justify-content: space-between; /* Change from 'center' to 'space-between' */
     height: 100%;
+    list-style: none;
 }
 
 
@@ -283,7 +290,7 @@ td {
 .star-button {
     background-color: #0A2463;
     border: none;
-    color: gold;
+    color: #FDC601;
     font-size: 20px;
     cursor: pointer;
 }
@@ -293,7 +300,13 @@ td {
 }
 
 input {
-    
+    font-family: 'Press Start 2P', sans-serif;
+    margin-left: 1rem;
+    padding: 1rem;
+}
+.prompt {
+    margin-left: 1rem;
+    padding-top: 1rem;
 }
 
 .popup {
