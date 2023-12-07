@@ -1,21 +1,5 @@
 let selectedCategory = null;
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Check if the current page is 'letter.html'
-    if (window.location.pathname.endsWith('letter.html')) {
-        showPopup();
-    }
-});
-
-function showPopup() {
-    document.getElementById('letterPopup').style.display = 'block';
-}
-
-function closePopup() {
-    document.getElementById('letterPopup').style.display = 'none';
-}
-
-
 // Function to toggle the star status for a penguin
 function toggleStar(penguinId, isStarred) {
     // Sending a POST request to the server

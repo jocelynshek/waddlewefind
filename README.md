@@ -21,3 +21,5 @@ export FLASK_ENV=development
 Then, run the program using "flask run".
 
 Thank you so much to all CS50 staff for a great semester! If you have any questions, comments, or concerns, please reach out at jocelynshek@college.harvard.edu or ricardofernandesgarcia@college.harvard.edu.
+
+Shoutout to the best TFs ever, Brian and Yaying!!!

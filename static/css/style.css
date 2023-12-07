@@ -21,7 +21,7 @@
     cursor: url('../resources/Cursor.png'), auto;
 }
 
-/* Body styles */
+/* Default Body Styles */
 body {
     font-family: 'Press Start 2P', sans-serif;
     line-height: 1.6;
@@ -38,6 +38,7 @@ body {
     overflow: hidden;
 }
 
+/* Styling specific for letter.html */
 .letter {
     font-family: 'Press Start 2P', sans-serif;
     line-height: 1.6;
@@ -46,6 +47,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /*image of letter background*/
     background-image: url("../resources/Letter.JPG");
     background-size: cover;
     background-position: center;
@@ -59,13 +61,13 @@ body {
     margin-left: 12rem;
 }
 
-
+/*Styling for default layout page to arrange elements to look like computer desktop*/
 .content-container {
     display: flex;
     align-items: center;
-    /* other styles for content-container */
 }
 
+/*resize icons*/
 .side-image {
     width: 200px;
     margin-left: 20px;
@@ -79,7 +81,7 @@ body {
     padding: 0;
 }
 
-/* Header styles */
+/* Header styles for layout.html*/
 header {
     background-color: #21242E;
     padding: 0.75rem;
@@ -95,7 +97,7 @@ header div {
     margin-left: 1rem;
 }
 
-/* Navigation styles */
+/* Navigation styles, also managing the icons in the computer desktop which serve as navigator */
 
 .desktop {
     display: flex;
@@ -130,7 +132,7 @@ nav ul li a img {
     margin-top: 2.25rem;
 }
 
-/* Footer styles */
+/* Footer styles acting as the "computer's" desktop bottom bar*/
 footer {
     display: flex;
     justify-content: center;
@@ -155,6 +157,7 @@ main {
     padding: 1rem;
 }
 
+/*start title design*/
 .start-title {
     font-family: 'PixelCowboy', sans-serif;
     font-size: 5rem;
@@ -168,6 +171,13 @@ main {
     0.2rem 0.2rem 0 #21242E; /* Bottom-right border */
 }
 
+.title-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*overall default button design*/
 button {
     font-family: 'Press Start 2P', sans-serif;
     font-size: 1.5rem;
@@ -188,19 +198,15 @@ button:hover {
     -moz-box-shadow: 0.2rem 0.2rem 0rem #21242E; /* For Mozilla browsers */
     box-shadow: 0.2rem 0.2rem 0rem #21242E; /* Standard */
 }
+
+/*exit X button for "windows"*/
 .exit {
     font-size: 1rem;
     color: #D8315B;
     border: 0.2rem solid #D8315B;
 }
 
-
-.title-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/*styling for windows encasing different page information*/
 .container {
     position: fixed;
     top: 20rem; /* Adjust the vertical position */
@@ -235,7 +241,7 @@ button:hover {
 
 .text p {
     flex: 1;
-    margin-bottom: 1rem; /* Adjust as needed for the desired space */
+    margin-bottom: 1rem; 
     margin-left: 2rem;
     font-size: 0.85rem;
 }
@@ -293,6 +299,7 @@ td {
     overflow-wrap: break-word;
 }
 
+/*styling for starred.html*/
 .star-button {
     background-color: #0A2463;
     border: none;
@@ -305,6 +312,7 @@ td {
     color: darkgoldenrod;
 }
 
+/* Styles specific for check.html*/
 input {
     font-family: 'Press Start 2P', sans-serif;
     margin-left: 1rem;
@@ -315,6 +323,7 @@ input {
     padding-top: 1rem;
 }
 
+/*styles specific for won*/
 .won,
 #reset {
     margin-left: 1rem;

@@ -1,7 +1,15 @@
-Our project was created using Python, HTML, CSS, and Javascript.
+For our CS50 final project, we created a penguin-themed game where the user is tasked with identifying the name of a penguin using characteristics and a database search function. Our main goal was to create a smoothly-running game that integrated neat design elements, a searchable database system, a story, and randomized gameplay options.
 
-The files we made were:
-- Python: server-side logic
-- HTML: Different pages for each page of the game: start page, computer.html main page, letter.html, search.html, check.html
-- CSS: manage style for HTML pages
-- JS: main.js (implements all interactive elements of game pages)
+Architecture and Technologies:
+Our project was created using Python, HTML, CSS, and Javascript. We chose these technologies for:
+- Python and Flask: As a relatively simple technology, Python and Flask were excellent tools for building our game as they allowed for quick testing and prototyping. There are also many libraries that we were able to integrate into our Python program, which allowed for simplicity. We included two Python files: app.py (which included the bulk of rendering web pages and main functions) and db.py (which managed database import and database manipulation functions)
+-SQLite3: We integrated SQL queries into our Python to search the penguin database and return relevant results.
+- HTML: Since this is a web-based program, HTML was foundational to creating our program. We have different files for each page of the game: start.html, computer.html, letter.html, search.html, check.html, etc.
+- CSS: Since we wanted our game to look nice, we needed to use CSS to manage style for the HTML pages. We have two main CSS files, style.css (which manages the bulk of page styling) and penguin-movement.css (which manages animation on the homepage), as well as other imported fonts.
+- JavaScript: JS was necessary to add interactivity to our program. We used one file, main.js, which implemented all interactive elements of the game pages.
+
+Given that a key element of our game is database interactivity, we made a csv file with penguin information and imported it into a penguins.db database. The original CSV file, and thus the database, has columns for the name, species, origin, location, sex, and age of penguins. We also added a column "is_starred" to the database when we decided to integrate a feature for users to star specific penguins. The front-end and back-end parts of the website communicate primarily through app.py render statements and main.js calling functions in app.py.
+
+The aformentioned interactive database feature was key for this project. Though we admittedly faced some hurdles at first, especially related to the cascading dropdowns, we decided to implement them using a series of event listeners. We used SQL queries to search the database and return relevant results.
+
+Through the process of making this project, we learned a lot about what it takes to make a well-designed, smoothly operating program. We particularly grew to understand the value of careful planning, so that we know the flow of the program and how different programs in the respository interact with each other. This would make the project easier to code and more organized. In the future, we hope to expand the game by adding more possibilities for randomization.
