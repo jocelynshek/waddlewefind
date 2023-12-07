@@ -36,7 +36,8 @@ def letter():
 
 @app.route('/computer.html')
 def computer():
-    return render_template('computer.html')
+    current_file = request.path
+    return render_template('computer.html', current_file = current_file)
 
 @app.route('/encyclopedia.html')
 def encyclopedia():

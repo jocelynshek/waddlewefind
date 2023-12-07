@@ -281,7 +281,7 @@ td {
 }
 
 .star-button {
-    background-color: transparent;
+    background-color: #0A2463;
     border: none;
     color: gold;
     font-size: 20px;
@@ -290,4 +290,8 @@ td {
 
 .star-button:hover {
     color: darkgoldenrod;
+}
+
+input {
+    
 }

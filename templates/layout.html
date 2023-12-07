@@ -6,6 +6,30 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="/static/js/main.js"></script>
+
+    <!--Script for Check-->
+    {% block script %}
+    <script>
+        function checkName() {
+            var name = document.getElementById('nameInput').value;
+            fetch('/check_name', {
+                method: 'POST',
+                body: new URLSearchParams('name=' + name)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.correct) {
+                    // Redirect to gameover.html for correct name
+                    window.location.href = '/gameover.html';
+                } else {
+                    // Display a popup for wrong name
+                    alert("Wrong Name!");
+                }
+            });
+        }
+    </script>
+    {% endblock %}
+
 </head>
 <body>
     <nav>
@@ -20,10 +44,22 @@
               <li><a href="check.html"><div>Check</div><div>In</div></a>
         </ul>
     </nav>
-    <main>
-        {% block main %}
-        {% endblock %}
-    </main>
+    {% if current_file != '/computer.html' %}
+        <main>
+            <div class="container">
+                <header>
+                    <div>
+                        <h1>{% block tab %}{% endblock %}</h1>
+                    </div>
+                    <div>
+                        <a href="/computer.html"><button class="exit">X</button></a>
+                    </div>
+                </header>
+                {% block main %}
+                {% endblock %}
+            </div>
+        </main>
+    {% endif %}
     <footer>
         <img id="bar" src="../static/resources/bar.png">
         <a href="/letter.html"><img src="../static/resources/Letter.png"></a>

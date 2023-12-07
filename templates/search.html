@@ -3,17 +3,12 @@
 {% block title %}
     Penguin Database Query
 {% endblock %}
-    {% block main %}
-    <div class="container">
-        <header>
-            <div>
-                <h1>Guest Penguin Database Search</h1>
-            </div>
-            <div>
-                <a href="/computer.html"><button class="exit">X</button></a>
-            </div>
-        </header>
 
+{% block tab %}
+    Penguin Guest Database Search
+{% endblock %}
+
+    {% block main %}
     <select name="category" id="category-dropdown">
         <option value="">Select a Category</option>
         {% for category in categories %}
@@ -36,11 +31,11 @@
                 <th class="text-start">Location</th>
                 <th class="text-start">Sex</th>
                 <th class="text-start">Age</th>
-                <th class="text-end"></th>
+                <th class="text-end">Starred</th>
             </tr>
         </thead>
        <tbody>
-        
+    
         </tbody>
     </table>
     <script src="../static/js/main.js"></script>

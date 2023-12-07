@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Check Name</title>
-    <script>
-        function checkName() {
-        var name = document.getElementById('nameInput').value;
-        fetch('/check_name', {
-            method: 'POST',
-            body: new URLSearchParams('name=' + name)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.correct) {
-                // Redirect to gameover.html for correct name
-                window.location.href = '/gameover.html';
-            } else {
-                // Display a popup for wrong name
-                alert("Wrong Name!");
-            }
-        });
-    }
-    </script>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block title %}
+    Check Name
+{% endblock %}
+
+{% block tab %}
+    Check In Guest's Name
+{% endblock %}
+
+{% block main %}
     <input type="text" id="nameInput" placeholder="Enter penguin name">
     <button onclick="checkName()">Enter</button>
-</body>
-</html>
+{% endblock %}
+
+{% block script %}
+    {{ super() }} {# Includes the scripts from the layout file #}
+{% endblock %}

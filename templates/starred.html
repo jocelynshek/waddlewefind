@@ -1,19 +1,14 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Penguin Database Query
+    Starred Penguin Guests
 {% endblock %}
-    {% block main %}
-    <div class="container">
-        <header>
-            <div>
-                <h1>Starred Penguins</h1>
-            </div>
-            <div>
-                <a href="/computer.html"><button class="exit">X</button></a>
-            </div>
-        </header>
 
+{% block tab %}
+    Starred Penguin Guests
+{% endblock %}
+
+    {% block main %}
     <table class="table tablestriped" id="penguins-table">
         <thead>
             <tr>
