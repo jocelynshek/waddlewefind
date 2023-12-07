@@ -22,7 +22,7 @@ gameoptions = [
     {'name':'Barrel', 'species': '???', 'origin': 'Subantarctic islands', 'location': '???', 'sex': 'M', 'age': '2', 'image': 'resources/PGentoo.png'},
     {'name':'Egg', 'species': '???', 'origin': '???', 'location': 'SEA LIFE Melbourne', 'sex': 'F', 'age': '???', 'image': 'resources/PKing_.png'},
     {'name':'Cecilia', 'species': '???', 'origin': '???', 'location': '???', 'sex': 'F', 'age': '???', 'image': 'resources/PMagellanic.png'},
-    {'name':'DeHoop', 'species': '???', 'origin': '???', 'location': '???', 'sex': 'M', 'age': '10+', 'image': 'resources/PHumboldt.png'}
+    {'name':'Alberto', 'species': '???', 'origin': '???', 'location': '???', 'sex': 'M', 'age': '10+', 'image': 'resources/PHumboldt.png'}
 ]
 
 # Function to randomize penguin
