@@ -54,8 +54,8 @@ body {
 }
 
 .letter h2,
-.letter p 
-.letter button{
+.letter p,
+.letter button {
     margin-left: 12rem;
 }
 
@@ -313,4 +313,9 @@ input {
 .prompt {
     margin-left: 1rem;
     padding-top: 1rem;
+}
+
+.won,
+#reset {
+    margin-left: 1rem;
 }
