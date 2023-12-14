@@ -1,7 +1,7 @@
 # Waddle We Find?
 A Harvard CS50 Final Project made by Jocelyn Shek '27 and Ricardo Fernandes Garcia '27. This is a penguin-themed detective/search game where you are tasked with identifying a penguin using limited information.
 
-WALKTHROUGH: https://youtu.be/pGH_Ti5J4TQ (apologies for the low quality of the first 20 seconds!)
+WALKTHROUGH: https://youtu.be/pGH_Ti5J4TQ
 
 This project requires Python Version 3.7+. If not already installed, follow installation instructions at https://www.python.org/downloads/. A virtual environment can be used, but is not required. Install all dependencies listed in the requirements.txt file using the terminal command "pip install -r requirements.txt".
 
